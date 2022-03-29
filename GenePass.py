@@ -11,9 +11,9 @@ charlist = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!\"#$%
 
 
 def infos():
-   aide = open("h.elp", "rt")
-   print(aide.read())
-   aide.close()
+
+   print("GenePass.py\nOPTION\n-h	--help		<Show this page>\n-n	--number    <Number of Passwords>\n-l	--length  	<Password Length>\n-o	--output  	<outputfile>\n\nEXAMPLES:\nPassGene.py -n 10 -l 50 -o pass.txt\nPassGene.py -h\nSEE THE MAN PAGE (https://github.com/M0ShYy/Password_Generator) FOR MORE OPTIONS AND EXAMPLES\n")
+
 
 
 def creapassword(nombre,longueur,output):
@@ -65,7 +65,7 @@ def main(argumentlist):
         sys.exit()
 
 if __name__ == '__main__':
-    #argumentList = (" --number 4 --length 40 --output test".split())
+    #argumentList = (" --help".split())
     #print(argumentList)
     argumentList = (sys.argv[1:])
     main(argumentList)
