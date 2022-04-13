@@ -2,7 +2,7 @@ import sys
 import random
 import getopt
 import pyperclip
-"""from timeit import default_timer as timer"""
+from timeit import default_timer as timer
 global info, silent
 # Options
 options = "hn:l:o:s"
@@ -12,7 +12,7 @@ long_options = ["help", "number =", "length =", "output =", "silent"]
 # list of the characters available
 numbers = "0123456789"
 lettres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-symboles = "!\"#$%&'()*+,-./:<=>?@[\]^_`{|}~;"
+symboles = "!#$%&_-.:" #"!\"#$%&'()*+,-./:<=>?@[\]^_`{|}~;"
 charlist = numbers + lettres + symboles
 
 
@@ -87,15 +87,15 @@ def main(argumentlist):
         infos()                                             # and print the help
         sys.exit()
 
-
+"""
 argumentList = (sys.argv[1:])                               # make a list of all the option wrote by the user
 main(argumentList)
 
-"""if __name__ == '__main__':
-    argument = "-s -l 10000 -n 10000"
+"""
+if __name__ == '__main__':
+    argument = "-s -l 10 -n 100000 -o pass.txt"
     argumentList = (argument.split())
     print(argumentList)
     start = timer()
     main(argumentList)
-    print("Password generated in:", timer() - start, "seconds")
-"""
+    print("Passwords generated in:", timer() - start, "seconds")
